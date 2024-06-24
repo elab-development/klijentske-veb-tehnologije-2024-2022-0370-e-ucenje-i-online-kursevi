@@ -6,30 +6,23 @@ interface KursProps {
   cena: number;
   onKupi?: () => void;
 }
-  
 
-const Kurs: React.FC<KursProps> = ({ naziv,opis,cena, onKupi}) => {
+const Kurs: React.FC<KursProps> = ({ naziv, opis, cena, onKupi }) => {
   const handleKupiClick = () => {
     if (onKupi) {
       onKupi();
     }
   };
 
-  
-  
-
   return (
-    <div className="kurs">
+    <div className='kurs'>
       <h2>{naziv}</h2>
-      <p className="opisKursa" >{opis}</p>
-        <div className="sekcija2">
-          
-          <button onClick={handleKupiClick}>Kupi kurs</button>
-          
-        </div>
-        <h3>{cena}e</h3>
+      <p className='opisKursa'>{opis}</p>
+      <div className='sekcija2'>
+        <button onClick={handleKupiClick}>Kupi kurs</button>
+      </div>
+      <h3>{cena}e</h3>
     </div>
-    
   );
 };
 
